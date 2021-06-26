@@ -1,0 +1,639 @@
+{
+	"info": {
+		"_postman_id": "2645812c-8121-4e9c-b950-1ece809099d2",
+		"name": "Control Empresas direcciones",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Prueba de Conexiones",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/PruebadeConexion",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"PruebadeConexion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Empresa Master / Empresa Predeterminada",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/EmpresaMaestra",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EmpresaMaestra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Todas Las Empresas / (VER)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM5Y2UzMzhkNjQxNDFmOTRkMDNhNTQiLCJub21icmUiOiJFbXByZXNhIE1hZXN0cmEiLCJlbWFpbCI6IkFkbWluIiwiaWF0IjoxNjE0NDAxMDkyLCJleHAiOjE2MTQ4MzMwOTJ9.s15_3MkbUlj53HA42JP32DvXnngAggKYjMvG5pFLG0Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/TodasLasEmpresas",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"TodasLasEmpresas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver Todos Los Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM5Y2UzMzhkNjQxNDFmOTRkMDNhNTQiLCJub21icmUiOiJFbXByZXNhIE1hZXN0cmEiLCJlbWFpbCI6IkFkbWluIiwiaWF0IjoxNjE0NDAxMDkyLCJleHAiOjE2MTQ4MzMwOTJ9.s15_3MkbUlj53HA42JP32DvXnngAggKYjMvG5pFLG0Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/VerTodosLosUsuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"VerTodosLosUsuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Empresa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM5Y2UzMzhkNjQxNDFmOTRkMDNhNTQiLCJub21icmUiOiJFbXByZXNhIE1hZXN0cmEiLCJlbWFpbCI6IkFkbWluIiwiaWF0IjoxNjE0NDAxMDkyLCJleHAiOjE2MTQ4MzMwOTJ9.s15_3MkbUlj53HA42JP32DvXnngAggKYjMvG5pFLG0Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "B&B",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "B&BCooperacion@B6b.gt",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "j85p9",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "15 Avenida 19-62, Cdad. de Guatemala",
+							"type": "text"
+						},
+						{
+							"key": "emailempresa",
+							"value": "Admin",
+							"type": "text"
+						},
+						{
+							"key": "pasemrpesa",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/AgregarEmpresa/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"AgregarEmpresa",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login/Empresa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "Admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/Login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar Usuario ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM5Y2UzMzhkNjQxNDFmOTRkMDNhNTQiLCJub21icmUiOiJFbXByZXNhIE1hZXN0cmEiLCJlbWFpbCI6IkFkbWluIiwiaWF0IjoxNjE0NDY2NTA3LCJleHAiOjE2MTQ4MTIxMDd9.RqYbzA_AzG67AmbE5JJ1mSbEK9YqfaNdy62u1BH2OW4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "personal",
+							"value": "Juan",
+							"type": "text"
+						},
+						{
+							"key": "puesto",
+							"value": "Admin",
+							"type": "text"
+						},
+						{
+							"key": "departamento",
+							"value": "Sistemas",
+							"type": "text"
+						},
+						{
+							"key": "empresas",
+							"value": "Admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/AgregarUsuario",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"AgregarUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver Usuarios",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM5Y2UzMzhkNjQxNDFmOTRkMDNhNTQiLCJub21icmUiOiJFbXByZXNhIE1hZXN0cmEiLCJlbWFpbCI6IkFkbWluIiwiaWF0IjoxNjE0NDAxMDkyLCJleHAiOjE2MTQ4MzMwOTJ9.s15_3MkbUlj53HA42JP32DvXnngAggKYjMvG5pFLG0Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "empresas",
+							"value": "Empresa Maestra",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/VerUsuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"VerUsuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ver Usuarios Por Puesto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM5Y2UzMzhkNjQxNDFmOTRkMDNhNTQiLCJub21icmUiOiJFbXByZXNhIE1hZXN0cmEiLCJlbWFpbCI6IkFkbWluIiwiaWF0IjoxNjE0NDAxMDkyLCJleHAiOjE2MTQ4MzMwOTJ9.s15_3MkbUlj53HA42JP32DvXnngAggKYjMvG5pFLG0Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "puesto",
+							"value": "Admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/verUsuariosPorPuesto",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"verUsuariosPorPuesto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver Usuarios Por Departamento",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM5Y2UzMzhkNjQxNDFmOTRkMDNhNTQiLCJub21icmUiOiJFbXByZXNhIE1hZXN0cmEiLCJlbWFpbCI6IkFkbWluIiwiaWF0IjoxNjE0NDAxMDkyLCJleHAiOjE2MTQ4MzMwOTJ9.s15_3MkbUlj53HA42JP32DvXnngAggKYjMvG5pFLG0Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "departamento",
+							"value": "Sistemas",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/VerUsuariosPorDepartamento",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"VerUsuariosPorDepartamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver Usuarios Por Nombre",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM5Y2UzMzhkNjQxNDFmOTRkMDNhNTQiLCJub21icmUiOiJFbXByZXNhIE1hZXN0cmEiLCJlbWFpbCI6IkFkbWluIiwiaWF0IjoxNjE0NDAxMDkyLCJleHAiOjE2MTQ4MzMwOTJ9.s15_3MkbUlj53HA42JP32DvXnngAggKYjMvG5pFLG0Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Juan",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/VerUsuariosPorNombre",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"VerUsuariosPorNombre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver Usuarios Por Id",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM5Y2UzMzhkNjQxNDFmOTRkMDNhNTQiLCJub21icmUiOiJFbXByZXNhIE1hZXN0cmEiLCJlbWFpbCI6IkFkbWluIiwiaWF0IjoxNjE0NDAxMDkyLCJleHAiOjE2MTQ4MzMwOTJ9.s15_3MkbUlj53HA42JP32DvXnngAggKYjMvG5pFLG0Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "603afbfe362033078017cce3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/VerUsuariosPorId",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"VerUsuariosPorId"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Empresas",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM5Y2UzMzhkNjQxNDFmOTRkMDNhNTQiLCJub21icmUiOiJFbXByZXNhIE1hZXN0cmEiLCJlbWFpbCI6IkFkbWluIiwiaWF0IjoxNjE0NDAxMDkyLCJleHAiOjE2MTQ4MzMwOTJ9.s15_3MkbUlj53HA42JP32DvXnngAggKYjMvG5pFLG0Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "Admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "delete",
+							"value": "B&B",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/EliminarEmpresas",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EliminarEmpresas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Usuarios",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM5Y2UzMzhkNjQxNDFmOTRkMDNhNTQiLCJub21icmUiOiJFbXByZXNhIE1hZXN0cmEiLCJlbWFpbCI6IkFkbWluIiwiaWF0IjoxNjE0NDAxMDkyLCJleHAiOjE2MTQ4MzMwOTJ9.s15_3MkbUlj53HA42JP32DvXnngAggKYjMvG5pFLG0Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "B&BCooperacion@B6b.gt",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "j85p9",
+							"type": "text"
+						},
+						{
+							"key": "delete",
+							"value": "Juan Carlos",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/EliminarUsuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EliminarUsuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Empresa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM5Y2UzMzhkNjQxNDFmOTRkMDNhNTQiLCJub21icmUiOiJFbXByZXNhIE1hZXN0cmEiLCJlbWFpbCI6IkFkbWluIiwiaWF0IjoxNjE0NDAxMDkyLCJleHAiOjE2MTQ4MzMwOTJ9.s15_3MkbUlj53HA42JP32DvXnngAggKYjMvG5pFLG0Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "Admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "idEmpresaModificar",
+							"value": "603bbcaf93482b2b407aa3ae",
+							"type": "text"
+						},
+						{
+							"key": "nombreEmpresaModificar",
+							"value": "Empresa Predeterminada",
+							"type": "text"
+						},
+						{
+							"key": "direccionEmpresaModificar",
+							"value": "No existe direccion",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/EditarEmpresa",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EditarEmpresa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Usuarios",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDM5Y2UzMzhkNjQxNDFmOTRkMDNhNTQiLCJub21icmUiOiJFbXByZXNhIE1hZXN0cmEiLCJlbWFpbCI6IkFkbWluIiwiaWF0IjoxNjE0NDAxMDkyLCJleHAiOjE2MTQ4MzMwOTJ9.s15_3MkbUlj53HA42JP32DvXnngAggKYjMvG5pFLG0Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "Admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "idUsuarioModificar",
+							"value": "603bd123e851f80f14725db5",
+							"type": "text"
+						},
+						{
+							"key": "nombreModificado",
+							"value": "Diego Lopez",
+							"type": "text"
+						},
+						{
+							"key": "departamentoModificado",
+							"value": "Ventas",
+							"type": "text"
+						},
+						{
+							"key": "puestoModificado",
+							"value": "Gerente",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/EditarUsuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"EditarUsuarios"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
